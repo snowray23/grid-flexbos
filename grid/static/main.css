@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: green;
+}
+header {
+    background-color: rgb(255, 0, 106);
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: aquamarine;
+    display:flex;
+    justify-content: center;
+}
+
+main {
+    display:grid;
+    /* need 2 columns and 1 side bar */
+    grid-template-columns: 2fr 1fr;
+    
+}
+
+.sidebar{
+    background-image: url("https://media.npr.org/assets/img/2023/11/16/ap23312726255722_wide-4b8eaaea918f54e69f5faf3e6281df12ab5615ac-s1400-c100.jpg");
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .sidebar {
+        order: 2; /* Move the sidebar below the content */
+    }
+}
